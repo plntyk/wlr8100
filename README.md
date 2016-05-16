@@ -1,14 +1,15 @@
 # wlr8100
 
 cal extraction:
+
 dd if=/dev/mtd6ro of=cal-pci-0000:01:00.0.bin bs=1 skip=24576 count=2116
-dd if=/dev/mtd7ro of=cal-pci-0000:01:00.0.bin bs=1 skip=348160 
-count=2116
+dd if=/dev/mtd7ro of=cal-pci-0000:01:00.0.bin bs=1 skip=348160 count=2116
 
 one seems to be the backup ?
 
 works partly:
 
+```
 [   13.270455] PCI: Enabling device 0000:01:00.0 (0000 -> 0002)
 [   13.276387] ath10k_pci 0000:01:00.0: pci irq legacy oper_irq_mode 1 
 irq_mode 0 reset_mode 0
@@ -32,5 +33,6 @@ firmware_loading_store: map pages failed
 crc32 bebc7c08
 [   15.286070] ath10k_pci 0000:01:00.0: htt-ver 2.1 wmi-op 5 htt-op 2 
 cal file max-sta 128 raw 0 hwcrypto 1
+```
 
-(bmi_id: N/A)
+issue: (bmi_id: N/A)
