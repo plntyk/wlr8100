@@ -1,0 +1,1229 @@
+
+U-Boot 0.0.9 (Feb 18 2013 - 14:56:17)
+Product Name: WN-AC1600DGR
+ap136 - Scorpion 1.0
+DRAM:128 MB
+Now running in RAM - U-Boot at: 87fc8000
+Flash Manuf Id 0xc2, DeviceId0 0x20, DeviceId1 0x18
+Flash size 16MB, sector count = 256
+In:    serial
+Out:   serial
+Err:   serial
+reset_switch: 
+reset_usb: 
+Multi Net:   
+
+ath_gmac_enet_initialize...
+
+athrs_sgmii_res_cal: cal value = 0xe
+No valid address in Flash. Using fixed address
+ath_gmac_enet_initialize: reset mask:c02200 
+Scorpion  ----> S17 PHY *
+: cfg1 0x80000000 cfg2 0x7114
+eth0: 00:03:7f:09:0b:ad
+athrs17_reg_init: SUPPORT_QCA8337
+athrs17_reg_init S17_GLOFW_CTRL1_REG624=7f7f7f7f
+athrs17_reg_init: MAC0 RGMII
+athrs17_reg_init S17_P0PAD_MODE_REG04=87680000
+athrs17_reg_init: Not SGMII_FORCED_MODE
+athrs17_reg_init S17_PWS_REG10=40000000
+athrs17_reg_init S17_P0STATUS_REG7c=7e
+athrs17_reg_init QCA8337 ID=1302
+athrs17_reg_init: complete
+eth0 up
+eth0
+Setting 0x18116290 to 0x60c0214f
+
+Please choose the operation: 
+   1: Load system code to SDRAM via TFTP. 
+   3: Boot system code via Flash (default).
+ 1  0 
+   
+3: System Boot system code via Flash.
+athrs17_set_portvlan_isolated complete
+## Booting image at 9f040000 ...
+   Image Name:   MIPS OpenWrt Linux-4.4.10
+   Created:      2016-05-15  14:32:02 UTC
+   Image Type:   MIPS Linux Kernel Image (lzma compressed)
+   Data Size:    1325930 Bytes =  1.3 MB
+   Load Address: 80060000
+   Entry Point:  80060000
+   Verifying Checksum at 0x9f040040 ...OK
+   Uncompressing Kernel Image ... OK
+
+Starting kernel ...
+
+[    0.000000] Linux version 4.4.10 (tenchi@tenchi-htpc) (gcc version 5.3.0 (LEDE GCC 5.3.0 r256) ) #1 Mon May 16 09:30:07 UTC 2016
+[    0.000000] bootconsole [early0] enabled
+[    0.000000] CPU0 revision is: 00019750 (MIPS 74Kc)
+[    0.000000] SoC: Qualcomm Atheros QCA9558 ver 1 rev 0
+[    0.000000] Determined physical RAM map:
+[    0.000000]  memory: 08000000 @ 00000000 (usable)
+[    0.000000] Initrd not found or empty - disabling initrd
+[    0.000000] No valid device tree found, continuing without
+[    0.000000] Zone ranges:
+[    0.000000]   Normal   [mem 0x0000000000000000-0x0000000007ffffff]
+[    0.000000] Movable zone start for each node
+[    0.000000] Early memory node ranges
+[    0.000000]   node   0: [mem 0x0000000000000000-0x0000000007ffffff]
+[    0.000000] Initmem setup node 0 [mem 0x0000000000000000-0x0000000007ffffff]
+[    0.000000] Primary instruction cache 64kB, VIPT, 4-way, linesize 32 bytes.
+[    0.000000] Primary data cache 32kB, 4-way, VIPT, cache aliases, linesize 32 bytes
+[    0.000000] Built 1 zonelists in Zone order, mobility grouping on.  Total pages: 32512
+[    0.000000] Kernel command line:  board=WLR8100 console=ttyS0,115200 mtdparts=spi0.0:192k(u-boot)ro,64k(u-boot-env)ro,1408k(kernel),14080k(rootfs),192k(unknown)ro,64k(art)ro,384k(unknown2)ro,15488k@0x40000(firmware) rootfstype=squashfs,jffs2 noinitrd
+[    0.000000] PID hash table entries: 512 (order: -1, 2048 bytes)
+[    0.000000] Dentry cache hash table entries: 16384 (order: 4, 65536 bytes)
+[    0.000000] Inode-cache hash table entries: 8192 (order: 3, 32768 bytes)
+[    0.000000] Writing ErrCtl register=00000000
+[    0.000000] Readback ErrCtl register=00000000
+[    0.000000] Memory: 125140K/131072K available (2948K kernel code, 148K rwdata, 748K rodata, 308K init, 200K bss, 5932K reserved, 0K cma-reserved)
+[    0.000000] SLUB: HWalign=32, Order=0-3, MinObjects=0, CPUs=1, Nodes=1
+[    0.000000] NR_IRQS:51
+[    0.000000] Clocks: CPU:720.000MHz, DDR:600.000MHz, AHB:240.000MHz, Ref:40.000MHz
+[    0.000000] clocksource: MIPS: mask: 0xffffffff max_cycles: 0xffffffff, max_idle_ns: 5309056796 ns
+[    0.000007] sched_clock: 32 bits at 360MHz, resolution 2ns, wraps every 5965232126ns
+[    0.008275] Calibrating delay loop... 358.80 BogoMIPS (lpj=1794048)
+[    0.071187] pid_max: default: 32768 minimum: 301
+[    0.076191] Mount-cache hash table entries: 1024 (order: 0, 4096 bytes)
+[    0.083233] Mountpoint-cache hash table entries: 1024 (order: 0, 4096 bytes)
+[    0.092649] clocksource: jiffies: mask: 0xffffffff max_cycles: 0xffffffff, max_idle_ns: 19112604462750000 ns
+[    0.103672] NET: Registered protocol family 16
+[    0.109519] MIPS: machine is Sitecom WLR-8100
+[    0.556843] registering PCI controller with io_map_base unset
+[    0.563049] registering PCI controller with io_map_base unset
+[    0.576183] PCI host bridge to bus 0000:00
+[    0.580585] pci_bus 0000:00: root bus resource [mem 0x10000000-0x11ffffff]
+[    0.587892] pci_bus 0000:00: root bus resource [io  0x0000]
+[    0.593824] pci_bus 0000:00: root bus resource [??? 0x00000000 flags 0x0]
+[    0.601038] pci_bus 0000:00: No busn resource found for root bus, will use [bus 00-ff]
+[    0.609912] pci 0000:00:00.0: BAR 0: assigned [mem 0x10000000-0x10007fff 64bit]
+[    0.617799] PCI host bridge to bus 0000:01
+[    0.622188] pci_bus 0000:01: root bus resource [mem 0x12000000-0x13ffffff]
+[    0.629504] pci_bus 0000:01: root bus resource [io  0x0001]
+[    0.635438] pci_bus 0000:01: root bus resource [??? 0x00000000 flags 0x0]
+[    0.642652] pci_bus 0000:01: No busn resource found for root bus, will use [bus 01-ff]
+[    0.651132] pci 0000:01:00.0: invalid calibration data
+[    0.656948] pci 0000:01:00.0: BAR 0: assigned [mem 0x12000000-0x121fffff 64bit]
+[    0.664760] pci 0000:01:00.0: BAR 6: assigned [mem 0x12200000-0x1220ffff pref]
+[    0.672445] pci 0000:00:00.0: using irq 40 for pin 1
+[    0.677737] pci 0000:01:00.0: using irq 41 for pin 1
+[    0.683693] clocksource: Switched to clocksource MIPS
+[    0.690147] NET: Registered protocol family 2
+[    0.695427] TCP established hash table entries: 1024 (order: 0, 4096 bytes)
+[    0.702851] TCP bind hash table entries: 1024 (order: 0, 4096 bytes)
+[    0.709659] TCP: Hash tables configured (established 1024 bind 1024)
+[    0.716498] UDP hash table entries: 256 (order: 0, 4096 bytes)
+[    0.722720] UDP-Lite hash table entries: 256 (order: 0, 4096 bytes)
+[    0.729622] NET: Registered protocol family 1
+[    0.735105] futex hash table entries: 256 (order: -1, 3072 bytes)
+[    0.754836] squashfs: version 4.0 (2009/01/31) Phillip Lougher
+[    0.761050] jffs2: version 2.2 (NAND) (SUMMARY) (LZMA) (RTIME) (CMODE_PRIORITY) (c) 2001-2006 Red Hat, Inc.
+[    0.773458] io scheduler noop registered
+[    0.777672] io scheduler deadline registered (default)
+[    0.783304] Serial: 8250/16550 driver, 1 ports, IRQ sharing disabled
+[    0.790438] console [ttyS0] disabled
+[    0.814310] serial8250.0: ttyS0 at MMIO 0x18020000 (irq = 11, base_baud = 2500000) is a 16550A
+[    0.823481] console [ttyS0] enabled
+[    0.823481] console [ttyS0] enabled
+[    0.830901] bootconsole [early0] disabled
+[    0.830901] bootconsole [early0] disabled
+[    0.841801] m25p80 spi0.0: found mx25l12805d, expected m25p80
+[    0.847680] m25p80 spi0.0: mx25l12805d (16384 Kbytes)
+[    0.852828] 8 cmdlinepart partitions found on MTD device spi0.0
+[    0.858843] Creating 8 MTD partitions on "spi0.0":
+[    0.863711] 0x000000000000-0x000000030000 : "u-boot"
+[    0.870420] 0x000000030000-0x000000040000 : "u-boot-env"
+[    0.877072] 0x000000040000-0x0000001a0000 : "kernel"
+[    0.883317] 0x0000001a0000-0x000000f60000 : "rootfs"
+[    0.889585] mtd: device 3 (rootfs) set to be root filesystem
+[    0.895431] 1 squashfs-split partitions found on MTD device rootfs
+[    0.901704] 0x000000a00000-0x000000f60000 : "rootfs_data"
+[    0.908467] 0x000000f60000-0x000000f90000 : "unknown"
+[    0.914874] 0x000000f90000-0x000000fa0000 : "art"
+[    0.920877] 0x000000fa0000-0x000001000000 : "unknown2"
+[    0.927372] 0x000000040000-0x000000f60000 : "firmware"
+[    0.942694] switch0: Atheros AR8337 rev. 2 switch registered on ag71xx-mdio.0
+[    1.031705] libphy: ag71xx_mdio: probed
+[    1.625191] ag71xx ag71xx.0: connected to PHY at ag71xx-mdio.0:00 [uid=004dd036, driver=Atheros AR8216/AR8236/AR8316]
+[    1.636508] eth0: Atheros AG71xx at 0xb9000000, irq 4, mode:RGMII
+[    2.225287] eth1: Atheros AG71xx at 0xba000000, irq 5, mode:SGMII
+[    2.233316] NET: Registered protocol family 10
+[    2.241175] NET: Registered protocol family 17
+[    2.245785] bridge: automatic filtering via arp/ip/ip6tables has been deprecated. Update your scripts to load br_netfilter if you need this.
+[    2.258692] 8021q: 802.1Q VLAN Support v1.8
+[    2.268451] VFS: Mounted root (squashfs filesystem) readonly on device 31:3.
+[    2.276759] Freeing unused kernel memory: 308K (80423000 - 80470000)
+[    3.463552] init: Console is alive
+[    3.467217] init: - watchdog -
+[    5.224253] usbcore: registered new interface driver usbfs
+[    5.229885] usbcore: registered new interface driver hub
+[    5.235390] usbcore: registered new device driver usb
+[    5.270445] SCSI subsystem initialized
+[    5.278876] ehci_hcd: USB 2.0 'Enhanced' Host Controller (EHCI) Driver
+[    5.286722] ehci-platform: EHCI generic platform driver
+[    5.292093] ehci-platform ehci-platform.0: EHCI Host Controller
+[    5.298173] ehci-platform ehci-platform.0: new USB bus registered, assigned bus number 1
+[    5.308443] ehci-platform ehci-platform.0: TX-TX IDP fix enabled
+[    5.314560] ehci-platform ehci-platform.0: irq 48, io mem 0x1b000000
+[    5.333723] ehci-platform ehci-platform.0: USB 2.0 started, EHCI 1.00
+[    5.340944] hub 1-0:1.0: USB hub found
+[    5.345055] hub 1-0:1.0: 1 port detected
+[    5.349343] ehci-platform ehci-platform.1: EHCI Host Controller
+[    5.355415] ehci-platform ehci-platform.1: new USB bus registered, assigned bus number 2
+[    5.365698] ehci-platform ehci-platform.1: TX-TX IDP fix enabled
+[    5.371802] ehci-platform ehci-platform.1: irq 49, io mem 0x1b400000
+[    5.393713] ehci-platform ehci-platform.1: USB 2.0 started, EHCI 1.00
+[    5.400963] hub 2-0:1.0: USB hub found
+[    5.405048] hub 2-0:1.0: 1 port detected
+[    5.414630] PCI: Enabling device 0000:00:00.0 (0000 -> 0002)
+[    5.420404] xhci_hcd 0000:00:00.0: xHCI Host Controller
+[    5.425761] xhci_hcd 0000:00:00.0: new USB bus registered, assigned bus number 3
+[    5.433503] xhci_hcd 0000:00:00.0: hcc params 0x040050af hci version 0x100 quirks 0x00080490
+[    5.443017] hub 3-0:1.0: USB hub found
+[    5.447162] hub 3-0:1.0: 2 ports detected
+[    5.451541] xhci_hcd 0000:00:00.0: xHCI Host Controller
+[    5.456896] xhci_hcd 0000:00:00.0: new USB bus registered, assigned bus number 4
+[    5.464544] usb usb4: We don't know the algorithms for LPM for this host, disabling LPM.
+[    5.473388] hub 4-0:1.0: USB hub found
+[    5.477522] hub 4-0:1.0: 2 ports detected
+[    5.486280] usbcore: registered new interface driver usb-storage
+[    5.502767] init: - preinit -
+[    6.190087] IPv6: ADDRCONF(NETDEV_UP): eth0: link is not ready
+Press the [f] key and hit [enter] to enter failsafe mode
+Press the [1], [2], [3] or [4] key and hit [enter] to select the debug level
+[    7.805119] eth0: link up (1000Mbps/Full duplex)
+[    7.809939] IPv6: ADDRCONF(NETDEV_CHANGE): eth0: link becomes ready
+[    9.367597] mount_root: loading kmods from internal overlay
+[    9.884669] jffs2: notice: (415) jffs2_build_xattr_subsystem: complete building xattr subsystem, 0 of xdatum (0 unchecked, 0 orphan) and 0 of xref (0 dead, 0 orphan) found.
+[    9.900790] block: attempting to load /tmp/jffs_cfg/upper/etc/config/fstab
+[    9.911982] block: extroot: not configured
+[    9.970470] jffs2: notice: (412) jffs2_build_xattr_subsystem: complete building xattr subsystem, 0 of xdatum (0 unchecked, 0 orphan) and 0 of xref (0 dead, 0 orphan) found.
+[   10.256493] block: attempting to load /tmp/jffs_cfg/upper/etc/config/fstab
+[   10.266933] block: extroot: not configured
+[   10.271871] mount_root: switching to jffs2 overlay
+[   10.299496] eth0: link down
+[   10.310784] procd: - early -
+[   10.314254] procd: - watchdog -
+[   10.989645] procd: - ubus -
+[   11.114676] random: ubusd urandom read with 18 bits of entropy available
+[   11.287977] procd: - init -
+Please press Enter to activate this console.
+[   12.725282] zram: Added device: zram0
+[   12.746688] tun: Universal TUN/TAP device driver, 1.6
+[   12.751819] tun: (C) 1999-2004 Max Krasnyansky <maxk@qualcomm.com>
+[   12.778617] sit: IPv6 over IPv4 tunneling driver
+[   12.804016] ip6_tables: (C) 2000-2006 Netfilter Core Team
+[   12.882570] Loading modules backported from Linux version wt-2016-05-12-0-g7a54796
+[   12.890295] Backport generated by backports.git backports-20160216-0-ge3c56e4
+[   12.990872] PCI: Enabling device 0000:01:00.0 (0000 -> 0002)
+[   12.996815] ath10k_pci 0000:01:00.0: pci irq legacy oper_irq_mode 1 irq_mode 0 reset_mode 0
+[   13.250480] ath10k_pci 0000:01:00.0: Direct firmware load for ath10k/pre-cal-pci-0000:01:00.0.bin failed with error -2
+[   13.261372] ath10k_pci 0000:01:00.0: Falling back to user helper
+[   13.336990] firmware ath10k!pre-cal-pci-0000:01:00.0.bin: firmware_loading_store: map pages failed
+[   13.346353] ath10k_pci 0000:01:00.0: Direct firmware load for ath10k/cal-pci-0000:01:00.0.bin failed with error -2
+[   13.356885] ath10k_pci 0000:01:00.0: Falling back to user helper
+[   13.501649] firmware ath10k!cal-pci-0000:01:00.0.bin: firmware_loading_store: map pages failed
+[   13.828704] CPU 0 Unable to handle kernel paging request at virtual address 00000030, epc == 801b8c04, ra == 8738f594
+[   13.839497] Oops[#1]:
+[   13.841810] CPU: 0 PID: 6 Comm: kworker/u2:0 Not tainted 4.4.10 #1
+[   13.848118] Workqueue: ath10k_wq ath10k_core_stop [ath10k_core]
+[   13.854126] task: 87829900 ti: 8784a000 task.ti: 8784a000
+[   13.859596] $ 0   : 00000000 0000006e 00000002 00000000
+[   13.864929] $ 4   : 00000030 8784bc16 00000000 803bd9f8
+[   13.870262] $ 8   : 00000020 00000000 00000020 75726573
+[   13.875595] $12   : 00000000 00000100 00000000 302e303a
+[   13.880928] $16   : 00000001 00000000 8784bc16 00000004
+[   13.886260] $20   : 00000030 000000f6 00000030 00000004
+[   13.891593] $24   : 00000000 038e0fb2                  
+[   13.896925] $28   : 8784a000 8784bb90 873b0000 8738f594
+[   13.902259] Hi    : 00000000
+[   13.905181] Lo    : 00000010
+[   13.908106] epc   : 801b8c04 hex_dump_to_buffer+0x280/0x404
+[   13.913766] ra    : 8738f594 ath10k_dbg+0x2a8/0x308 [ath10k_core]
+[   13.919938] Status: 1100fc03	KERNEL EXL IE 
+[   13.924208] Cause : 00800008 (ExcCode 02)
+[   13.928272] BadVA : 00000030
+[   13.931185] PrId  : 00019750 (MIPS 74Kc)
+[   13.935161] Modules linked in: ath10k_pci(+) ath10k_core ath mac80211 cfg80211 compat ledtrig_usbdev ip6t_REJECT nf_reject_ipv6 nf_log_ipv6 nf_log_common ip6table_raw ip6table_mangle ip6table_filter ip6_tables x_tables ifb sit tunnel4 ip_tunnel tun vfat fat zram lzo_decompress lzo_compress lz4_decompress lz4_compress zsmalloc usb_storage xhci_plat_hcd xhci_pci xhci_hcd ehci_platform ehci_hcd sd_mod scsi_mod gpio_button_hotplug ext4 jbd2 mbcache usbcore nls_base usb_common crc16 crypto_hash
+[   13.979502] Process kworker/u2:0 (pid: 6, threadinfo=8784a000, task=87829900, tls=00000000)
+[   13.987961] Stack : 873b94b4 873b79f8 873b79f0 00000030 00000030 872193e0 873b0000 00000031
+	  00000001 8784bbac 0000000e 8738f33c 00000010 80400000 873b94b4 873b79f8
+	  873b79f0 00000030 00000030 872193e0 873b0000 8738f594 8710e300 803c0f98
+	  803c29fc 873b94b4 8784bc16 000000f6 00000001 4d3d7063 69004445 30303030
+	  30303030 3a200030 30303a30 313a3030 2e3000b4 803c348c c03d2000 0003c788
+	  ...
+[   14.024288] Call Trace:
+[   14.026767] [<801b8c04>] hex_dump_to_buffer+0x280/0x404
+[   14.032077] [<8738f594>] ath10k_dbg+0x2a8/0x308 [ath10k_core]
+[   14.037912] 
+[   14.039424] 
+Code: 02b1f023  1000001e  8fa20020 <90840000> 00044102  01074021  91080000  a0a80000  24680003 
+[   14.049577] ---[ end trace b882fdc84557912b ]---
+[   14.056266] Fatal exception: panic in 5 seconds
+
+U-Boot 0.0.9 (Feb 18 2013 - 14:56:17)
+Product Name: WN-AC1600DGR
+ap136 - Scorpion 1.0
+DRAM:128 MB
+Now running in RAM - U-Boot at: 87fc8000
+Flash Manuf Id 0xc2, DeviceId0 0x20, DeviceId1 0x18
+Flash size 16MB, sector count = 256
+In:    serial
+Out:   serial
+Err:   serial
+reset_switch: 
+reset_usb: 
+Multi Net:   
+
+ath_gmac_enet_initialize...
+
+athrs_sgmii_res_cal: cal value = 0xe
+No valid address in Flash. Using fixed address
+ath_gmac_enet_initialize: reset mask:c02200 
+Scorpion  ----> S17 PHY *
+: cfg1 0x80000000 cfg2 0x7114
+eth0: 00:03:7f:09:0b:ad
+athrs17_reg_init: SUPPORT_QCA8337
+athrs17_reg_init S17_GLOFW_CTRL1_REG624=7f7f7f7f
+athrs17_reg_init: MAC0 RGMII
+athrs17_reg_init S17_P0PAD_MODE_REG04=87680000
+athrs17_reg_init: Not SGMII_FORCED_MODE
+athrs17_reg_init S17_PWS_REG10=40000000
+athrs17_reg_init S17_P0STATUS_REG7c=7e
+athrs17_reg_init QCA8337 ID=1302
+athrs17_reg_init: complete
+eth0 up
+eth0
+Setting 0x18116290 to 0x60c0214f
+
+Please choose the operation: 
+   1: Load system code to SDRAM via TFTP. 
+   3: Boot system code via Flash (default).
+ 1  0 
+   
+3: System Boot system code via Flash.
+athrs17_set_portvlan_isolated complete
+## Booting image at 9f040000 ...
+   Image Name:   MIPS OpenWrt Linux-4.4.10
+   Created:      2016-05-15  14:32:02 UTC
+   Image Type:   MIPS Linux Kernel Image (lzma compressed)
+   Data Size:    1325930 Bytes =  1.3 MB
+   Load Address: 80060000
+   Entry Point:  80060000
+   Verifying Checksum at 0x9f040040 ...OK
+   Uncompressing Kernel Image ... OK
+
+Starting kernel ...
+
+[    0.000000] Linux version 4.4.10 (tenchi@tenchi-htpc) (gcc version 5.3.0 (LEDE GCC 5.3.0 r256) ) #1 Mon May 16 09:30:07 UTC 2016
+[    0.000000] bootconsole [early0] enabled
+[    0.000000] CPU0 revision is: 00019750 (MIPS 74Kc)
+[    0.000000] SoC: Qualcomm Atheros QCA9558 ver 1 rev 0
+[    0.000000] Determined physical RAM map:
+[    0.000000]  memory: 08000000 @ 00000000 (usable)
+[    0.000000] Initrd not found or empty - disabling initrd
+[    0.000000] No valid device tree found, continuing without
+[    0.000000] Zone ranges:
+[    0.000000]   Normal   [mem 0x0000000000000000-0x0000000007ffffff]
+[    0.000000] Movable zone start for each node
+[    0.000000] Early memory node ranges
+[    0.000000]   node   0: [mem 0x0000000000000000-0x0000000007ffffff]
+[    0.000000] Initmem setup node 0 [mem 0x0000000000000000-0x0000000007ffffff]
+[    0.000000] Primary instruction cache 64kB, VIPT, 4-way, linesize 32 bytes.
+[    0.000000] Primary data cache 32kB, 4-way, VIPT, cache aliases, linesize 32 bytes
+[    0.000000] Built 1 zonelists in Zone order, mobility grouping on.  Total pages: 32512
+[    0.000000] Kernel command line:  board=WLR8100 console=ttyS0,115200 mtdparts=spi0.0:192k(u-boot)ro,64k(u-boot-env)ro,1408k(kernel),14080k(rootfs),192k(unknown)ro,64k(art)ro,384k(unknown2)ro,15488k@0x40000(firmware) rootfstype=squashfs,jffs2 noinitrd
+[    0.000000] PID hash table entries: 512 (order: -1, 2048 bytes)
+[    0.000000] Dentry cache hash table entries: 16384 (order: 4, 65536 bytes)
+[    0.000000] Inode-cache hash table entries: 8192 (order: 3, 32768 bytes)
+[    0.000000] Writing ErrCtl register=00000000
+[    0.000000] Readback ErrCtl register=00000000
+[    0.000000] Memory: 125140K/131072K available (2948K kernel code, 148K rwdata, 748K rodata, 308K init, 200K bss, 5932K reserved, 0K cma-reserved)
+[    0.000000] SLUB: HWalign=32, Order=0-3, MinObjects=0, CPUs=1, Nodes=1
+[    0.000000] NR_IRQS:51
+[    0.000000] Clocks: CPU:720.000MHz, DDR:600.000MHz, AHB:240.000MHz, Ref:40.000MHz
+[    0.000000] clocksource: MIPS: mask: 0xffffffff max_cycles: 0xffffffff, max_idle_ns: 5309056796 ns
+[    0.000007] sched_clock: 32 bits at 360MHz, resolution 2ns, wraps every 5965232126ns
+[    0.008275] Calibrating delay loop... 358.80 BogoMIPS (lpj=1794048)
+[    0.071187] pid_max: default: 32768 minimum: 301
+[    0.076192] Mount-cache hash table entries: 1024 (order: 0, 4096 bytes)
+[    0.083241] Mountpoint-cache hash table entries: 1024 (order: 0, 4096 bytes)
+[    0.092659] clocksource: jiffies: mask: 0xffffffff max_cycles: 0xffffffff, max_idle_ns: 19112604462750000 ns
+[    0.103689] NET: Registered protocol family 16
+[    0.109536] MIPS: machine is Sitecom WLR-8100
+[    0.556859] registering PCI controller with io_map_base unset
+[    0.563067] registering PCI controller with io_map_base unset
+[    0.576195] PCI host bridge to bus 0000:00
+[    0.580593] pci_bus 0000:00: root bus resource [mem 0x10000000-0x11ffffff]
+[    0.587900] pci_bus 0000:00: root bus resource [io  0x0000]
+[    0.593832] pci_bus 0000:00: root bus resource [??? 0x00000000 flags 0x0]
+[    0.601047] pci_bus 0000:00: No busn resource found for root bus, will use [bus 00-ff]
+[    0.609921] pci 0000:00:00.0: BAR 0: assigned [mem 0x10000000-0x10007fff 64bit]
+[    0.617807] PCI host bridge to bus 0000:01
+[    0.622196] pci_bus 0000:01: root bus resource [mem 0x12000000-0x13ffffff]
+[    0.629512] pci_bus 0000:01: root bus resource [io  0x0001]
+[    0.635447] pci_bus 0000:01: root bus resource [??? 0x00000000 flags 0x0]
+[    0.642660] pci_bus 0000:01: No busn resource found for root bus, will use [bus 01-ff]
+[    0.651140] pci 0000:01:00.0: invalid calibration data
+[    0.656958] pci 0000:01:00.0: BAR 0: assigned [mem 0x12000000-0x121fffff 64bit]
+[    0.664768] pci 0000:01:00.0: BAR 6: assigned [mem 0x12200000-0x1220ffff pref]
+[    0.672453] pci 0000:00:00.0: using irq 40 for pin 1
+[    0.677744] pci 0000:01:00.0: using irq 41 for pin 1
+[    0.683701] clocksource: Switched to clocksource MIPS
+[    0.690156] NET: Registered protocol family 2
+[    0.695437] TCP established hash table entries: 1024 (order: 0, 4096 bytes)
+[    0.702860] TCP bind hash table entries: 1024 (order: 0, 4096 bytes)
+[    0.709666] TCP: Hash tables configured (established 1024 bind 1024)
+[    0.716505] UDP hash table entries: 256 (order: 0, 4096 bytes)
+[    0.722720] UDP-Lite hash table entries: 256 (order: 0, 4096 bytes)
+[    0.729621] NET: Registered protocol family 1
+[    0.735108] futex hash table entries: 256 (order: -1, 3072 bytes)
+[    0.754858] squashfs: version 4.0 (2009/01/31) Phillip Lougher
+[    0.761075] jffs2: version 2.2 (NAND) (SUMMARY) (LZMA) (RTIME) (CMODE_PRIORITY) (c) 2001-2006 Red Hat, Inc.
+[    0.773484] io scheduler noop registered
+[    0.777697] io scheduler deadline registered (default)
+[    0.783328] Serial: 8250/16550 driver, 1 ports, IRQ sharing disabled
+[    0.790463] console [ttyS0] disabled
+[    0.814335] serial8250.0: ttyS0 at MMIO 0x18020000 (irq = 11, base_baud = 2500000) is a 16550A
+[    0.823504] console [ttyS0] enabled
+[    0.823504] console [ttyS0] enabled
+[    0.830924] bootconsole [early0] disabled
+[    0.830924] bootconsole [early0] disabled
+[    0.841825] m25p80 spi0.0: found mx25l12805d, expected m25p80
+[    0.847713] m25p80 spi0.0: mx25l12805d (16384 Kbytes)
+[    0.852859] 8 cmdlinepart partitions found on MTD device spi0.0
+[    0.858874] Creating 8 MTD partitions on "spi0.0":
+[    0.863743] 0x000000000000-0x000000030000 : "u-boot"
+[    0.870448] 0x000000030000-0x000000040000 : "u-boot-env"
+[    0.877109] 0x000000040000-0x0000001a0000 : "kernel"
+[    0.883357] 0x0000001a0000-0x000000f60000 : "rootfs"
+[    0.889627] mtd: device 3 (rootfs) set to be root filesystem
+[    0.895472] 1 squashfs-split partitions found on MTD device rootfs
+[    0.901744] 0x000000a00000-0x000000f60000 : "rootfs_data"
+[    0.908509] 0x000000f60000-0x000000f90000 : "unknown"
+[    0.914921] 0x000000f90000-0x000000fa0000 : "art"
+[    0.920927] 0x000000fa0000-0x000001000000 : "unknown2"
+[    0.927422] 0x000000040000-0x000000f60000 : "firmware"
+[    0.942743] switch0: Atheros AR8337 rev. 2 switch registered on ag71xx-mdio.0
+[    1.031710] libphy: ag71xx_mdio: probed
+[    1.625200] ag71xx ag71xx.0: connected to PHY at ag71xx-mdio.0:00 [uid=004dd036, driver=Atheros AR8216/AR8236/AR8316]
+[    1.636515] eth0: Atheros AG71xx at 0xb9000000, irq 4, mode:RGMII
+[    2.225296] eth1: Atheros AG71xx at 0xba000000, irq 5, mode:SGMII
+[    2.233328] NET: Registered protocol family 10
+[    2.241181] NET: Registered protocol family 17
+[    2.245791] bridge: automatic filtering via arp/ip/ip6tables has been deprecated. Update your scripts to load br_netfilter if you need this.
+[    2.258698] 8021q: 802.1Q VLAN Support v1.8
+[    2.268455] VFS: Mounted root (squashfs filesystem) readonly on device 31:3.
+[    2.276766] Freeing unused kernel memory: 308K (80423000 - 80470000)
+[    3.463553] init: Console is alive
+[    3.467213] init: - watchdog -
+f[    5.225429] usbcore: registered new interface driver usbfs
+[    5.231063] usbcore: registered new interface driver hub
+[    5.236574] usbcore: registered new device driver usb
+[    5.271560] SCSI subsystem initialized
+[    5.279978] ehci_hcd: USB 2.0 'Enhanced' Host Controller (EHCI) Driver
+[    5.287846] ehci-platform: EHCI generic platform driver
+[    5.293217] ehci-platform ehci-platform.0: EHCI Host Controller
+[    5.299292] ehci-platform ehci-platform.0: new USB bus registered, assigned bus number 1
+[    5.309564] ehci-platform ehci-platform.0: TX-TX IDP fix enabled
+[    5.315677] ehci-platform ehci-platform.0: irq 48, io mem 0x1b000000
+[    5.333730] ehci-platform ehci-platform.0: USB 2.0 started, EHCI 1.00
+[    5.340940] hub 1-0:1.0: USB hub found
+[    5.345055] hub 1-0:1.0: 1 port detected
+[    5.349339] ehci-platform ehci-platform.1: EHCI Host Controller
+[    5.355416] ehci-platform ehci-platform.1: new USB bus registered, assigned bus number 2
+[    5.365704] ehci-platform ehci-platform.1: TX-TX IDP fix enabled
+[    5.371807] ehci-platform ehci-platform.1: irq 49, io mem 0x1b400000
+[    5.393721] ehci-platform ehci-platform.1: USB 2.0 started, EHCI 1.00
+[    5.400971] hub 2-0:1.0: USB hub found
+[    5.405061] hub 2-0:1.0: 1 port detected
+[    5.414667] PCI: Enabling device 0000:00:00.0 (0000 -> 0002)
+[    5.420445] xhci_hcd 0000:00:00.0: xHCI Host Controller
+[    5.425802] xhci_hcd 0000:00:00.0: new USB bus registered, assigned bus number 3
+[    5.433547] xhci_hcd 0000:00:00.0: hcc params 0x040050af hci version 0x100 quirks 0x00080490
+[    5.443060] hub 3-0:1.0: USB hub found
+[    5.447197] hub 3-0:1.0: 2 ports detected
+[    5.451573] xhci_hcd 0000:00:00.0: xHCI Host Controller
+[    5.456929] xhci_hcd 0000:00:00.0: new USB bus registered, assigned bus number 4
+[    5.464570] usb usb4: We don't know the algorithms for LPM for this host, disabling LPM.
+[    5.473408] hub 4-0:1.0: USB hub found
+[    5.477548] hub 4-0:1.0: 2 ports detected
+[    5.486301] usbcore: registered new interface driver usb-storage
+[    5.502791] init: - preinit -
+ [    6.188212] IPv6: ADDRCONF(NETDEV_UP): eth0: link is not ready
+Press the [f] key and hit [enter] to enter failsafe mode
+Press the [1], [2], [3] or [4] key and hit [enter] to select the debug level
+f
+- failsafe -
+[    7.076456] random: dropbearkey urandom read with 12 bits of entropy available
+Generating key, this may take a while...
+[    7.805145] eth0: link up (1000Mbps/Full duplex)
+[    7.809964] IPv6: ADDRCONF(NETDEV_CHANGE): eth0: link becomes ready
+Public key portion is:
+ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAAAgQCj0f8bKE4nQVRT3w6Jx/1GLdevDXlUsokfmDv44PB7uaHSIC1Awww6jFnO759gx3XZc/kgORnGuEByWwkS1Q3LeJPiZgt9rR4Pv5tonnsPphZbKfAx2GFIUwKmHrJx3kqjh75YPwZqwX4T6MNlwq181couOAz+lfcXoVqOmZKw1w== root@(none)
+Fingerprint: md5 f9:d1:c8:60:6d:e4:43:62:50:a7:39:51:ed:65:76:da
+
+
+BusyBox v1.24.2 () built-in shell (ash)
+
+ash: can't access tty; job control turned off
+     _________
+    /        /\      _    ___ ___  ___
+   /  LE    /  \    | |  | __|   \| __|
+  /    DE  /    \   | |__| _|| |) | _|
+ /________/  LE  \  |____|___|___/|___|                      lede-project.org
+ \        \   DE /
+  \    LE  \    /  -----------------------------------------------------------
+   \  DE    \  /    Reboot (HEAD, r256)
+    \________\/    -----------------------------------------------------------
+
+================= FAILSAFE MODE active ================
+special commands:
+* firstboot	     reset settings to factory defaults
+* mount_root	 mount root-partition with config files
+
+after mount_root:
+* passwd			 change root's password
+* /etc/config		    directory with config files
+
+for more help see:
+http://wiki.openwrt.org/doc/howto/generic.failsafe
+=======================================================
+
+root@(none):/# firstboot
+[   15.345119] jffs2reset: This will erase all settings and remove any installed packages. Are you sure? [N/y]
+root@(none):/# 
+root@(none):/# firstboot[J -y
+[   18.385641] jffs2reset: /dev/mtdblock4 is not mounted
+[   18.390859] jffs2reset: /dev/mtdblock4 will be erased on next mount
+root@(none):/# reboot
+reboot
+root@(none):/# [   23.384675] reboot: Restarting system
+ 
+
+U-Boot 0.0.9 (Feb 18 2013 - 14:56:17)
+Product Name: WN-AC1600DGR
+ap136 - Scorpion 1.0
+DRAM:128 MB
+Now running in RAM - U-Boot at: 87fc8000
+Flash Manuf Id 0xc2, DeviceId0 0x20, DeviceId1 0x18
+Flash size 16MB, sector count = 256
+In:    serial
+Out:   serial
+Err:   serial
+reset_switch: 
+reset_usb: 
+Multi Net:   
+
+ath_gmac_enet_initialize...
+
+athrs_sgmii_res_cal: cal value = 0xe
+No valid address in Flash. Using fixed address
+ath_gmac_enet_initialize: reset mask:c02200 
+Scorpion  ----> S17 PHY *
+: cfg1 0x80000000 cfg2 0x7114
+eth0: 00:03:7f:09:0b:ad
+athrs17_reg_init: SUPPORT_QCA8337
+athrs17_reg_init S17_GLOFW_CTRL1_REG624=7f7f7f7f
+athrs17_reg_init: MAC0 RGMII
+athrs17_reg_init S17_P0PAD_MODE_REG04=87680000
+athrs17_reg_init: Not SGMII_FORCED_MODE
+athrs17_reg_init S17_PWS_REG10=40000000
+athrs17_reg_init S17_P0STATUS_REG7c=7e
+athrs17_reg_init QCA8337 ID=1302
+athrs17_reg_init: complete
+eth0 up
+eth0
+Setting 0x18116290 to 0x60c0214f
+
+Please choose the operation: 
+   1: Load system code to SDRAM via TFTP. 
+   3: Boot system code via Flash (default).
+ 1  0 
+   
+3: System Boot system code via Flash.
+athrs17_set_portvlan_isolated complete
+## Booting image at 9f040000 ...
+   Image Name:   MIPS OpenWrt Linux-4.4.10
+   Created:      2016-05-15  14:32:02 UTC
+   Image Type:   MIPS Linux Kernel Image (lzma compressed)
+   Data Size:    1325930 Bytes =  1.3 MB
+   Load Address: 80060000
+   Entry Point:  80060000
+   Verifying Checksum at 0x9f040040 ...OK
+   Uncompressing Kernel Image ... OK
+
+Starting kernel ...
+
+[    0.000000] Linux version 4.4.10 (tenchi@tenchi-htpc) (gcc version 5.3.0 (LEDE GCC 5.3.0 r256) ) #1 Mon May 16 09:30:07 UTC 2016
+[    0.000000] bootconsole [early0] enabled
+[    0.000000] CPU0 revision is: 00019750 (MIPS 74Kc)
+[    0.000000] SoC: Qualcomm Atheros QCA9558 ver 1 rev 0
+[    0.000000] Determined physical RAM map:
+[    0.000000]  memory: 08000000 @ 00000000 (usable)
+[    0.000000] Initrd not found or empty - disabling initrd
+[    0.000000] No valid device tree found, continuing without
+[    0.000000] Zone ranges:
+[    0.000000]   Normal   [mem 0x0000000000000000-0x0000000007ffffff]
+[    0.000000] Movable zone start for each node
+[    0.000000] Early memory node ranges
+[    0.000000]   node   0: [mem 0x0000000000000000-0x0000000007ffffff]
+[    0.000000] Initmem setup node 0 [mem 0x0000000000000000-0x0000000007ffffff]
+[    0.000000] Primary instruction cache 64kB, VIPT, 4-way, linesize 32 bytes.
+[    0.000000] Primary data cache 32kB, 4-way, VIPT, cache aliases, linesize 32 bytes
+[    0.000000] Built 1 zonelists in Zone order, mobility grouping on.  Total pages: 32512
+[    0.000000] Kernel command line:  board=WLR8100 console=ttyS0,115200 mtdparts=spi0.0:192k(u-boot)ro,64k(u-boot-env)ro,1408k(kernel),14080k(rootfs),192k(unknown)ro,64k(art)ro,384k(unknown2)ro,15488k@0x40000(firmware) rootfstype=squashfs,jffs2 noinitrd
+[    0.000000] PID hash table entries: 512 (order: -1, 2048 bytes)
+[    0.000000] Dentry cache hash table entries: 16384 (order: 4, 65536 bytes)
+[    0.000000] Inode-cache hash table entries: 8192 (order: 3, 32768 bytes)
+[    0.000000] Writing ErrCtl register=00000000
+[    0.000000] Readback ErrCtl register=00000000
+[    0.000000] Memory: 125140K/131072K available (2948K kernel code, 148K rwdata, 748K rodata, 308K init, 200K bss, 5932K reserved, 0K cma-reserved)
+[    0.000000] SLUB: HWalign=32, Order=0-3, MinObjects=0, CPUs=1, Nodes=1
+[    0.000000] NR_IRQS:51
+[    0.000000] Clocks: CPU:720.000MHz, DDR:600.000MHz, AHB:240.000MHz, Ref:40.000MHz
+[    0.000000] clocksource: MIPS: mask: 0xffffffff max_cycles: 0xffffffff, max_idle_ns: 5309056796 ns
+[    0.000007] sched_clock: 32 bits at 360MHz, resolution 2ns, wraps every 5965232126ns
+[    0.008275] Calibrating delay loop... 358.80 BogoMIPS (lpj=1794048)
+[    0.071187] pid_max: default: 32768 minimum: 301
+[    0.076192] Mount-cache hash table entries: 1024 (order: 0, 4096 bytes)
+[    0.083241] Mountpoint-cache hash table entries: 1024 (order: 0, 4096 bytes)
+[    0.092660] clocksource: jiffies: mask: 0xffffffff max_cycles: 0xffffffff, max_idle_ns: 19112604462750000 ns
+[    0.103688] NET: Registered protocol family 16
+[    0.109528] MIPS: machine is Sitecom WLR-8100
+[    0.556851] registering PCI controller with io_map_base unset
+[    0.563058] registering PCI controller with io_map_base unset
+[    0.576190] PCI host bridge to bus 0000:00
+[    0.580593] pci_bus 0000:00: root bus resource [mem 0x10000000-0x11ffffff]
+[    0.587900] pci_bus 0000:00: root bus resource [io  0x0000]
+[    0.593832] pci_bus 0000:00: root bus resource [??? 0x00000000 flags 0x0]
+[    0.601047] pci_bus 0000:00: No busn resource found for root bus, will use [bus 00-ff]
+[    0.609922] pci 0000:00:00.0: BAR 0: assigned [mem 0x10000000-0x10007fff 64bit]
+[    0.617807] PCI host bridge to bus 0000:01
+[    0.622196] pci_bus 0000:01: root bus resource [mem 0x12000000-0x13ffffff]
+[    0.629512] pci_bus 0000:01: root bus resource [io  0x0001]
+[    0.635446] pci_bus 0000:01: root bus resource [??? 0x00000000 flags 0x0]
+[    0.642660] pci_bus 0000:01: No busn resource found for root bus, will use [bus 01-ff]
+[    0.651140] pci 0000:01:00.0: invalid calibration data
+[    0.656955] pci 0000:01:00.0: BAR 0: assigned [mem 0x12000000-0x121fffff 64bit]
+[    0.664768] pci 0000:01:00.0: BAR 6: assigned [mem 0x12200000-0x1220ffff pref]
+[    0.672454] pci 0000:00:00.0: using irq 40 for pin 1
+[    0.677745] pci 0000:01:00.0: using irq 41 for pin 1
+[    0.683701] clocksource: Switched to clocksource MIPS
+[    0.690155] NET: Registered protocol family 2
+[    0.695433] TCP established hash table entries: 1024 (order: 0, 4096 bytes)
+[    0.702851] TCP bind hash table entries: 1024 (order: 0, 4096 bytes)
+[    0.709658] TCP: Hash tables configured (established 1024 bind 1024)
+[    0.716496] UDP hash table entries: 256 (order: 0, 4096 bytes)
+[    0.722711] UDP-Lite hash table entries: 256 (order: 0, 4096 bytes)
+[    0.729613] NET: Registered protocol family 1
+[    0.735101] futex hash table entries: 256 (order: -1, 3072 bytes)
+[    0.754839] squashfs: version 4.0 (2009/01/31) Phillip Lougher
+[    0.761058] jffs2: version 2.2 (NAND) (SUMMARY) (LZMA) (RTIME) (CMODE_PRIORITY) (c) 2001-2006 Red Hat, Inc.
+[    0.773462] io scheduler noop registered
+[    0.777680] io scheduler deadline registered (default)
+[    0.783312] Serial: 8250/16550 driver, 1 ports, IRQ sharing disabled
+[    0.790449] console [ttyS0] disabled
+[    0.814318] serial8250.0: ttyS0 at MMIO 0x18020000 (irq = 11, base_baud = 2500000) is a 16550A
+[    0.823487] console [ttyS0] enabled
+[    0.823487] console [ttyS0] enabled
+[    0.830907] bootconsole [early0] disabled
+[    0.830907] bootconsole [early0] disabled
+[    0.841805] m25p80 spi0.0: found mx25l12805d, expected m25p80
+[    0.847688] m25p80 spi0.0: mx25l12805d (16384 Kbytes)
+[    0.852834] 8 cmdlinepart partitions found on MTD device spi0.0
+[    0.858850] Creating 8 MTD partitions on "spi0.0":
+[    0.863717] 0x000000000000-0x000000030000 : "u-boot"
+[    0.870423] 0x000000030000-0x000000040000 : "u-boot-env"
+[    0.877078] 0x000000040000-0x0000001a0000 : "kernel"
+[    0.883326] 0x0000001a0000-0x000000f60000 : "rootfs"
+[    0.889592] mtd: device 3 (rootfs) set to be root filesystem
+[    0.895438] 1 squashfs-split partitions found on MTD device rootfs
+[    0.901709] 0x000000a00000-0x000000f60000 : "rootfs_data"
+[    0.908468] 0x000000f60000-0x000000f90000 : "unknown"
+[    0.914875] 0x000000f90000-0x000000fa0000 : "art"
+[    0.920868] 0x000000fa0000-0x000001000000 : "unknown2"
+[    0.927371] 0x000000040000-0x000000f60000 : "firmware"
+[    0.942685] switch0: Atheros AR8337 rev. 2 switch registered on ag71xx-mdio.0
+[    1.031665] libphy: ag71xx_mdio: probed
+[    1.625200] ag71xx ag71xx.0: connected to PHY at ag71xx-mdio.0:00 [uid=004dd036, driver=Atheros AR8216/AR8236/AR8316]
+[    1.636517] eth0: Atheros AG71xx at 0xb9000000, irq 4, mode:RGMII
+[    2.225294] eth1: Atheros AG71xx at 0xba000000, irq 5, mode:SGMII
+[    2.233323] NET: Registered protocol family 10
+[    2.241177] NET: Registered protocol family 17
+[    2.245792] bridge: automatic filtering via arp/ip/ip6tables has been deprecated. Update your scripts to load br_netfilter if you need this.
+[    2.258699] 8021q: 802.1Q VLAN Support v1.8
+[    2.268461] VFS: Mounted root (squashfs filesystem) readonly on device 31:3.
+[    2.276764] Freeing unused kernel memory: 308K (80423000 - 80470000)
+[    3.463573] init: Console is alive
+[    3.467232] init: - watchdog -
+[    5.224350] usbcore: registered new interface driver usbfs
+[    5.229989] usbcore: registered new interface driver hub
+[    5.235494] usbcore: registered new device driver usb
+[    5.270498] SCSI subsystem initialized
+[    5.278942] ehci_hcd: USB 2.0 'Enhanced' Host Controller (EHCI) Driver
+[    5.286786] ehci-platform: EHCI generic platform driver
+[    5.292161] ehci-platform ehci-platform.0: EHCI Host Controller
+[    5.298241] ehci-platform ehci-platform.0: new USB bus registered, assigned bus number 1
+[    5.308512] ehci-platform ehci-platform.0: TX-TX IDP fix enabled
+[    5.314629] ehci-platform ehci-platform.0: irq 48, io mem 0x1b000000
+[    5.333732] ehci-platform ehci-platform.0: USB 2.0 started, EHCI 1.00
+[    5.340951] hub 1-0:1.0: USB hub found
+[    5.345070] hub 1-0:1.0: 1 port detected
+[    5.349357] ehci-platform ehci-platform.1: EHCI Host Controller
+[    5.355430] ehci-platform ehci-platform.1: new USB bus registered, assigned bus number 2
+[    5.365713] ehci-platform ehci-platform.1: TX-TX IDP fix enabled
+[    5.371817] ehci-platform ehci-platform.1: irq 49, io mem 0x1b400000
+[    5.393721] ehci-platform ehci-platform.1: USB 2.0 started, EHCI 1.00
+[    5.400966] hub 2-0:1.0: USB hub found
+[    5.405045] hub 2-0:1.0: 1 port detected
+[    5.414643] PCI: Enabling device 0000:00:00.0 (0000 -> 0002)
+[    5.420420] xhci_hcd 0000:00:00.0: xHCI Host Controller
+[    5.425776] xhci_hcd 0000:00:00.0: new USB bus registered, assigned bus number 3
+[    5.433518] xhci_hcd 0000:00:00.0: hcc params 0x040050af hci version 0x100 quirks 0x00080490
+[    5.443031] hub 3-0:1.0: USB hub found
+[    5.447176] hub 3-0:1.0: 2 ports detected
+[    5.451553] xhci_hcd 0000:00:00.0: xHCI Host Controller
+[    5.456911] xhci_hcd 0000:00:00.0: new USB bus registered, assigned bus number 4
+[    5.464558] usb usb4: We don't know the algorithms for LPM for this host, disabling LPM.
+[    5.473402] hub 4-0:1.0: USB hub found
+[    5.477538] hub 4-0:1.0: 2 ports detected
+[    5.486291] usbcore: registered new interface driver usb-storage
+[    5.502783] init: - preinit -
+[    6.187449] IPv6: ADDRCONF(NETDEV_UP): eth0: link is not ready
+Press the [f] key and hit [enter] to enter failsafe mode
+Press the [1], [2], [3] or [4] key and hit [enter] to select the debug level
+[    7.805128] eth0: link up (1000Mbps/Full duplex)
+[    7.809946] IPv6: ADDRCONF(NETDEV_CHANGE): eth0: link becomes ready
+[    8.359354] mount_root: loading kmods from internal overlay
+[    8.825881] block: attempting to load /etc/config/fstab
+[    8.831331] block: unable to load configuration (fstab: Entry not found)
+[    8.838300] block: no usable configuration
+[    8.842968] mount_root: jffs2 not ready yet, using temporary tmpfs overlay
+[    8.868452] eth0: link down
+[    8.879708] procd: - early -
+[    8.882716] procd: - watchdog -
+[    9.561065] procd: - ubus -
+[    9.686541] random: ubusd urandom read with 16 bits of entropy available
+[    9.844200] procd: - init -
+Please press Enter to activate this console.
+[   11.300187] zram: Added device: zram0
+[   11.320748] tun: Universal TUN/TAP device driver, 1.6
+[   11.325917] tun: (C) 1999-2004 Max Krasnyansky <maxk@qualcomm.com>
+[   11.351628] sit: IPv6 over IPv4 tunneling driver
+[   11.377380] ip6_tables: (C) 2000-2006 Netfilter Core Team
+[   11.455675] Loading modules backported from Linux version wt-2016-05-12-0-g7a54796
+[   11.463356] Backport generated by backports.git backports-20160216-0-ge3c56e4
+[   11.563994] PCI: Enabling device 0000:01:00.0 (0000 -> 0002)
+[   11.569895] ath10k_pci 0000:01:00.0: pci irq legacy oper_irq_mode 1 irq_mode 0 reset_mode 0
+[   11.802964] ath10k_pci 0000:01:00.0: Direct firmware load for ath10k/pre-cal-pci-0000:01:00.0.bin failed with error -2
+[   11.813867] ath10k_pci 0000:01:00.0: Falling back to user helper
+[   11.889074] firmware ath10k!pre-cal-pci-0000:01:00.0.bin: firmware_loading_store: map pages failed
+[   11.898431] ath10k_pci 0000:01:00.0: Direct firmware load for ath10k/cal-pci-0000:01:00.0.bin failed with error -2
+[   11.908964] ath10k_pci 0000:01:00.0: Falling back to user helper
+[   12.052141] firmware ath10k!cal-pci-0000:01:00.0.bin: firmware_loading_store: map pages failed
+[   12.378905] ath10k_pci 0000:01:00.0: qca988x hw2.0 target 0x4100016c chip_id 0x043202ff sub 0000:0000
+[   12.388303] ath10k_pci 0000:01:00.0: kconfig debug 1 debugfs 1 tracing 0 dfs 1 testmode 1
+[   12.401349] ath10k_pci 0000:01:00.0: firmware ver 10.2.4.97 api 5 features no-p2p crc32 f91e34f2
+[   12.450463] ath10k_pci 0000:01:00.0: Direct firmware load for ath10k/QCA988X/hw2.0/board-2.bin failed with error -2
+[   12.461073] ath10k_pci 0000:01:00.0: Falling back to user helper
+[   12.536408] firmware ath10k!QCA988X!hw2.0!board-2.bin: firmware_loading_store: map pages failed
+[   12.545666] ath10k_pci 0000:01:00.0: board_file api 1 bmi_id N/A crc32 bebc7c08
+[   12.671978] ath10k_pci 0000:01:00.0: otp calibration failed: 2
+[   12.677916] ath10k_pci 0000:01:00.0: failed to run otp: -22
+[   12.683569] ath10k_pci 0000:01:00.0: could not init core (-22)
+[   12.689584] ath10k_pci 0000:01:00.0: could not probe fw (-22)
+[   12.801138] u32 classifier
+[   12.803929]     input device check on
+[   12.807642]     Actions configured
+[   12.813142] Mirror/redirect action on
+[   12.888336] ip_tables: (C) 2000-2006 Netfilter Core Team
+[   12.921049] nf_conntrack version 0.5.0 (1960 buckets, 7840 max)
+[   12.982524] xt_time: kernel timezone is -0000
+[   12.999525] usbcore: registered new interface driver ath9k_htc
+[   13.044828] ieee80211 phy1: Atheros AR9550 Rev:0 mem=0xb8100000, irq=47
+[   17.704964] zram0: detected capacity change from 0 to 63963136
+[   18.039125] Adding 62460k swap on /dev/zram0.  Priority:-1 extents:1 across:62460k SS
+[   23.339525] IPv6: ADDRCONF(NETDEV_UP): eth0: link is not ready
+[   23.370188] device eth0.1 entered promiscuous mode
+[   23.375093] device eth0 entered promiscuous mode
+[   23.410663] IPv6: ADDRCONF(NETDEV_UP): br-lan: link is not ready
+[   23.604369] IPv6: ADDRCONF(NETDEV_UP): eth0.2: link is not ready
+[   24.895141] eth0: link up (1000Mbps/Full duplex)
+[   24.899959] IPv6: ADDRCONF(NETDEV_CHANGE): eth0: link becomes ready
+[   24.943765] br-lan: port 1(eth0.1) entered forwarding state
+[   24.949467] br-lan: port 1(eth0.1) entered forwarding state
+[   24.955256] IPv6: ADDRCONF(NETDEV_CHANGE): eth0.2: link becomes ready
+[   25.043748] IPv6: ADDRCONF(NETDEV_CHANGE): br-lan: link becomes ready
+[   26.943723] br-lan: port 1(eth0.1) entered forwarding state
+[   48.568483] jffs2_scan_eraseblock(): End of filesystem marker found at 0x0
+[   48.575555] jffs2_build_filesystem(): unlocking the mtd device... done.
+[   48.582264] jffs2_build_filesystem(): erasing all blocks after the end marker... 
+[   79.583727] random: nonblocking pool is initialized
+[   88.589305] done.
+[   88.591292] jffs2: notice: (2043) jffs2_build_xattr_subsystem: complete building xattr subsystem, 0 of xdatum (0 unchecked, 0 orphan) and 0 of xref (0 dead, 0 orphan) found.
+
+
+
+BusyBox v1.24.2 () built-in shell (ash)
+
+     _________
+    /        /\      _    ___ ___  ___
+   /  LE    /  \    | |  | __|   \| __|
+  /    DE  /    \   | |__| _|| |) | _|
+ /________/  LE  \  |____|___|___/|___|                      lede-project.org
+ \        \   DE /
+  \    LE  \    /  -----------------------------------------------------------
+   \  DE    \  /    Reboot (HEAD, r256)
+    \________\/    -----------------------------------------------------------
+
+root@lede:/# 
+root@lede:/# i[Jvi /et
+root@lede:/# vi /etc/[Jc[Jmod
+root@lede:/# vi /etc/modules[J.d
+root@lede:/# vi /etc/modules.d/[J55
+root@lede:/# vi /etc/modules.d/55-ath10k 
+
+->skip_otp=y
+
+root@lede:/# reboot
+root@lede:/# [  137.148568] br-lan: port 1(eth0.1) entered disabled state
+[  137.164056] device eth0.1 left promiscuous mode
+[  137.168659] device eth0 left promiscuous mode
+[  137.173169] br-lan: port 1(eth0.1) entered disabled state
+[  137.188378] IPv6: ADDRCONF(NETDEV_UP): eth0.1: link is not ready
+[  137.458591] eth0: link down
+[  141.364499] Removing MTD device #4 (rootfs_data) with use count 1
+[  141.386148] reboot: Restarting system
+ 
+
+U-Boot 0.0.9 (Feb 18 2013 - 14:56:17)
+Product Name: WN-AC1600DGR
+ap136 - Scorpion 1.0
+DRAM:128 MB
+Now running in RAM - U-Boot at: 87fc8000
+Flash Manuf Id 0xc2, DeviceId0 0x20, DeviceId1 0x18
+Flash size 16MB, sector count = 256
+In:    serial
+Out:   serial
+Err:   serial
+reset_switch: 
+reset_usb: 
+Multi Net:   
+
+ath_gmac_enet_initialize...
+
+athrs_sgmii_res_cal: cal value = 0xe
+No valid address in Flash. Using fixed address
+ath_gmac_enet_initialize: reset mask:c02200 
+Scorpion  ----> S17 PHY *
+: cfg1 0x80000000 cfg2 0x7114
+eth0: 00:03:7f:09:0b:ad
+athrs17_reg_init: SUPPORT_QCA8337
+athrs17_reg_init S17_GLOFW_CTRL1_REG624=7f7f7f7f
+athrs17_reg_init: MAC0 RGMII
+athrs17_reg_init S17_P0PAD_MODE_REG04=87680000
+athrs17_reg_init: Not SGMII_FORCED_MODE
+athrs17_reg_init S17_PWS_REG10=40000000
+athrs17_reg_init S17_P0STATUS_REG7c=7e
+athrs17_reg_init QCA8337 ID=1302
+athrs17_reg_init: complete
+eth0 up
+eth0
+Setting 0x18116290 to 0x60c0214f
+
+Please choose the operation: 
+   1: Load system code to SDRAM via TFTP. 
+   3: Boot system code via Flash (default).
+ 1  0 
+   
+3: System Boot system code via Flash.
+athrs17_set_portvlan_isolated complete
+## Booting image at 9f040000 ...
+   Image Name:   MIPS OpenWrt Linux-4.4.10
+   Created:      2016-05-15  14:32:02 UTC
+   Image Type:   MIPS Linux Kernel Image (lzma compressed)
+   Data Size:    1325930 Bytes =  1.3 MB
+   Load Address: 80060000
+   Entry Point:  80060000
+   Verifying Checksum at 0x9f040040 ...OK
+   Uncompressing Kernel Image ... OK
+
+Starting kernel ...
+
+[    0.000000] Linux version 4.4.10 (tenchi@tenchi-htpc) (gcc version 5.3.0 (LEDE GCC 5.3.0 r256) ) #1 Mon May 16 09:30:07 UTC 2016
+[    0.000000] bootconsole [early0] enabled
+[    0.000000] CPU0 revision is: 00019750 (MIPS 74Kc)
+[    0.000000] SoC: Qualcomm Atheros QCA9558 ver 1 rev 0
+[    0.000000] Determined physical RAM map:
+[    0.000000]  memory: 08000000 @ 00000000 (usable)
+[    0.000000] Initrd not found or empty - disabling initrd
+[    0.000000] No valid device tree found, continuing without
+[    0.000000] Zone ranges:
+[    0.000000]   Normal   [mem 0x0000000000000000-0x0000000007ffffff]
+[    0.000000] Movable zone start for each node
+[    0.000000] Early memory node ranges
+[    0.000000]   node   0: [mem 0x0000000000000000-0x0000000007ffffff]
+[    0.000000] Initmem setup node 0 [mem 0x0000000000000000-0x0000000007ffffff]
+[    0.000000] Primary instruction cache 64kB, VIPT, 4-way, linesize 32 bytes.
+[    0.000000] Primary data cache 32kB, 4-way, VIPT, cache aliases, linesize 32 bytes
+[    0.000000] Built 1 zonelists in Zone order, mobility grouping on.  Total pages: 32512
+[    0.000000] Kernel command line:  board=WLR8100 console=ttyS0,115200 mtdparts=spi0.0:192k(u-boot)ro,64k(u-boot-env)ro,1408k(kernel),14080k(rootfs),192k(unknown)ro,64k(art)ro,384k(unknown2)ro,15488k@0x40000(firmware) rootfstype=squashfs,jffs2 noinitrd
+[    0.000000] PID hash table entries: 512 (order: -1, 2048 bytes)
+[    0.000000] Dentry cache hash table entries: 16384 (order: 4, 65536 bytes)
+[    0.000000] Inode-cache hash table entries: 8192 (order: 3, 32768 bytes)
+[    0.000000] Writing ErrCtl register=00000000
+[    0.000000] Readback ErrCtl register=00000000
+[    0.000000] Memory: 125140K/131072K available (2948K kernel code, 148K rwdata, 748K rodata, 308K init, 200K bss, 5932K reserved, 0K cma-reserved)
+[    0.000000] SLUB: HWalign=32, Order=0-3, MinObjects=0, CPUs=1, Nodes=1
+[    0.000000] NR_IRQS:51
+[    0.000000] Clocks: CPU:720.000MHz, DDR:600.000MHz, AHB:240.000MHz, Ref:40.000MHz
+[    0.000000] clocksource: MIPS: mask: 0xffffffff max_cycles: 0xffffffff, max_idle_ns: 5309056796 ns
+[    0.000007] sched_clock: 32 bits at 360MHz, resolution 2ns, wraps every 5965232126ns
+[    0.008275] Calibrating delay loop... 358.80 BogoMIPS (lpj=1794048)
+[    0.071187] pid_max: default: 32768 minimum: 301
+[    0.076191] Mount-cache hash table entries: 1024 (order: 0, 4096 bytes)
+[    0.083233] Mountpoint-cache hash table entries: 1024 (order: 0, 4096 bytes)
+[    0.092652] clocksource: jiffies: mask: 0xffffffff max_cycles: 0xffffffff, max_idle_ns: 19112604462750000 ns
+[    0.103680] NET: Registered protocol family 16
+[    0.109521] MIPS: machine is Sitecom WLR-8100
+[    0.556842] registering PCI controller with io_map_base unset
+[    0.563050] registering PCI controller with io_map_base unset
+[    0.576185] PCI host bridge to bus 0000:00
+[    0.580584] pci_bus 0000:00: root bus resource [mem 0x10000000-0x11ffffff]
+[    0.587892] pci_bus 0000:00: root bus resource [io  0x0000]
+[    0.593824] pci_bus 0000:00: root bus resource [??? 0x00000000 flags 0x0]
+[    0.601038] pci_bus 0000:00: No busn resource found for root bus, will use [bus 00-ff]
+[    0.609912] pci 0000:00:00.0: BAR 0: assigned [mem 0x10000000-0x10007fff 64bit]
+[    0.617800] PCI host bridge to bus 0000:01
+[    0.622188] pci_bus 0000:01: root bus resource [mem 0x12000000-0x13ffffff]
+[    0.629504] pci_bus 0000:01: root bus resource [io  0x0001]
+[    0.635438] pci_bus 0000:01: root bus resource [??? 0x00000000 flags 0x0]
+[    0.642652] pci_bus 0000:01: No busn resource found for root bus, will use [bus 01-ff]
+[    0.651132] pci 0000:01:00.0: invalid calibration data
+[    0.656947] pci 0000:01:00.0: BAR 0: assigned [mem 0x12000000-0x121fffff 64bit]
+[    0.664760] pci 0000:01:00.0: BAR 6: assigned [mem 0x12200000-0x1220ffff pref]
+[    0.672445] pci 0000:00:00.0: using irq 40 for pin 1
+[    0.677736] pci 0000:01:00.0: using irq 41 for pin 1
+[    0.683694] clocksource: Switched to clocksource MIPS
+[    0.690148] NET: Registered protocol family 2
+[    0.695426] TCP established hash table entries: 1024 (order: 0, 4096 bytes)
+[    0.702843] TCP bind hash table entries: 1024 (order: 0, 4096 bytes)
+[    0.709649] TCP: Hash tables configured (established 1024 bind 1024)
+[    0.716489] UDP hash table entries: 256 (order: 0, 4096 bytes)
+[    0.722711] UDP-Lite hash table entries: 256 (order: 0, 4096 bytes)
+[    0.729614] NET: Registered protocol family 1
+[    0.735100] futex hash table entries: 256 (order: -1, 3072 bytes)
+[    0.754821] squashfs: version 4.0 (2009/01/31) Phillip Lougher
+[    0.761033] jffs2: version 2.2 (NAND) (SUMMARY) (LZMA) (RTIME) (CMODE_PRIORITY) (c) 2001-2006 Red Hat, Inc.
+[    0.773439] io scheduler noop registered
+[    0.777656] io scheduler deadline registered (default)
+[    0.783287] Serial: 8250/16550 driver, 1 ports, IRQ sharing disabled
+[    0.790421] console [ttyS0] disabled
+[    0.814294] serial8250.0: ttyS0 at MMIO 0x18020000 (irq = 11, base_baud = 2500000) is a 16550A
+[    0.823463] console [ttyS0] enabled
+[    0.823463] console [ttyS0] enabled
+[    0.830884] bootconsole [early0] disabled
+[    0.830884] bootconsole [early0] disabled
+[    0.841786] m25p80 spi0.0: found mx25l12805d, expected m25p80
+[    0.847671] m25p80 spi0.0: mx25l12805d (16384 Kbytes)
+[    0.852819] 8 cmdlinepart partitions found on MTD device spi0.0
+[    0.858834] Creating 8 MTD partitions on "spi0.0":
+[    0.863702] 0x000000000000-0x000000030000 : "u-boot"
+[    0.870409] 0x000000030000-0x000000040000 : "u-boot-env"
+[    0.877067] 0x000000040000-0x0000001a0000 : "kernel"
+[    0.883316] 0x0000001a0000-0x000000f60000 : "rootfs"
+[    0.889587] mtd: device 3 (rootfs) set to be root filesystem
+[    0.895441] 1 squashfs-split partitions found on MTD device rootfs
+[    0.901712] 0x000000a00000-0x000000f60000 : "rootfs_data"
+[    0.908477] 0x000000f60000-0x000000f90000 : "unknown"
+[    0.914884] 0x000000f90000-0x000000fa0000 : "art"
+[    0.920881] 0x000000fa0000-0x000001000000 : "unknown2"
+[    0.927383] 0x000000040000-0x000000f60000 : "firmware"
+[    0.942709] switch0: Atheros AR8337 rev. 2 switch registered on ag71xx-mdio.0
+[    1.031700] libphy: ag71xx_mdio: probed
+[    1.625192] ag71xx ag71xx.0: connected to PHY at ag71xx-mdio.0:00 [uid=004dd036, driver=Atheros AR8216/AR8236/AR8316]
+[    1.636509] eth0: Atheros AG71xx at 0xb9000000, irq 4, mode:RGMII
+[    2.225286] eth1: Atheros AG71xx at 0xba000000, irq 5, mode:SGMII
+[    2.233318] NET: Registered protocol family 10
+[    2.241158] NET: Registered protocol family 17
+[    2.245768] bridge: automatic filtering via arp/ip/ip6tables has been deprecated. Update your scripts to load br_netfilter if you need this.
+[    2.258675] 8021q: 802.1Q VLAN Support v1.8
+[    2.268436] VFS: Mounted root (squashfs filesystem) readonly on device 31:3.
+[    2.276746] Freeing unused kernel memory: 308K (80423000 - 80470000)
+[    3.463638] init: Console is alive
+[    3.467309] init: - watchdog -
+[    5.225849] usbcore: registered new interface driver usbfs
+[    5.231488] usbcore: registered new interface driver hub
+[    5.237002] usbcore: registered new device driver usb
+[    5.271980] SCSI subsystem initialized
+[    5.280392] ehci_hcd: USB 2.0 'Enhanced' Host Controller (EHCI) Driver
+[    5.288258] ehci-platform: EHCI generic platform driver
+[    5.293633] ehci-platform ehci-platform.0: EHCI Host Controller
+[    5.299708] ehci-platform ehci-platform.0: new USB bus registered, assigned bus number 1
+[    5.309980] ehci-platform ehci-platform.0: TX-TX IDP fix enabled
+[    5.316093] ehci-platform ehci-platform.0: irq 48, io mem 0x1b000000
+[    5.333723] ehci-platform ehci-platform.0: USB 2.0 started, EHCI 1.00
+[    5.340938] hub 1-0:1.0: USB hub found
+[    5.345060] hub 1-0:1.0: 1 port detected
+[    5.349344] ehci-platform ehci-platform.1: EHCI Host Controller
+[    5.355417] ehci-platform ehci-platform.1: new USB bus registered, assigned bus number 2
+[    5.365705] ehci-platform ehci-platform.1: TX-TX IDP fix enabled
+[    5.371810] ehci-platform ehci-platform.1: irq 49, io mem 0x1b400000
+[    5.393714] ehci-platform ehci-platform.1: USB 2.0 started, EHCI 1.00
+[    5.400959] hub 2-0:1.0: USB hub found
+[    5.405045] hub 2-0:1.0: 1 port detected
+[    5.414655] PCI: Enabling device 0000:00:00.0 (0000 -> 0002)
+[    5.420431] xhci_hcd 0000:00:00.0: xHCI Host Controller
+[    5.425787] xhci_hcd 0000:00:00.0: new USB bus registered, assigned bus number 3
+[    5.433531] xhci_hcd 0000:00:00.0: hcc params 0x040050af hci version 0x100 quirks 0x00080490
+[    5.443042] hub 3-0:1.0: USB hub found
+[    5.447181] hub 3-0:1.0: 2 ports detected
+[    5.451561] xhci_hcd 0000:00:00.0: xHCI Host Controller
+[    5.456913] xhci_hcd 0000:00:00.0: new USB bus registered, assigned bus number 4
+[    5.464563] usb usb4: We don't know the algorithms for LPM for this host, disabling LPM.
+[    5.473400] hub 4-0:1.0: USB hub found
+[    5.477532] hub 4-0:1.0: 2 ports detected
+[    5.486286] usbcore: registered new interface driver usb-storage
+[    5.502776] init: - preinit -
+[    6.187523] IPv6: ADDRCONF(NETDEV_UP): eth0: link is not ready
+Press the [f] key and hit [enter] to enter failsafe mode
+Press the [1], [2], [3] or [4] key and hit [enter] to select the debug level
+[    7.805120] eth0: link up (1000Mbps/Full duplex)
+[    7.809940] IPv6: ADDRCONF(NETDEV_CHANGE): eth0: link becomes ready
+[    9.364101] mount_root: loading kmods from internal overlay
+[    9.881642] jffs2: notice: (415) jffs2_build_xattr_subsystem: complete building xattr subsystem, 0 of xdatum (0 unchecked, 0 orphan) and 0 of xref (0 dead, 0 orphan) found.
+[    9.897732] block: attempting to load /tmp/jffs_cfg/upper/etc/config/fstab
+[    9.908917] block: extroot: not configured
+[    9.967472] jffs2: notice: (412) jffs2_build_xattr_subsystem: complete building xattr subsystem, 0 of xdatum (0 unchecked, 0 orphan) and 0 of xref (0 dead, 0 orphan) found.
+[   10.254411] block: attempting to load /tmp/jffs_cfg/upper/etc/config/fstab
+[   10.264805] block: extroot: not configured
+[   10.269692] mount_root: switching to jffs2 overlay
+[   10.296171] eth0: link down
+[   10.307792] procd: - early -
+[   10.310799] procd: - watchdog -
+[   10.989154] procd: - ubus -
+[   11.112847] random: ubusd urandom read with 18 bits of entropy available
+[   11.286069] procd: - init -
+Please press Enter to activate this console.
+[   12.726982] zram: Added device: zram0
+[   12.750660] tun: Universal TUN/TAP device driver, 1.6
+[   12.755831] tun: (C) 1999-2004 Max Krasnyansky <maxk@qualcomm.com>
+[   12.777992] sit: IPv6 over IPv4 tunneling driver
+[   12.800808] ip6_tables: (C) 2000-2006 Netfilter Core Team
+[   12.883849] Loading modules backported from Linux version wt-2016-05-12-0-g7a54796
+[   12.891527] Backport generated by backports.git backports-20160216-0-ge3c56e4
+[   12.991357] PCI: Enabling device 0000:01:00.0 (0000 -> 0002)
+[   12.997283] ath10k_pci 0000:01:00.0: pci irq legacy oper_irq_mode 1 irq_mode 0 reset_mode 0
+[   13.248123] ath10k_pci 0000:01:00.0: Direct firmware load for ath10k/pre-cal-pci-0000:01:00.0.bin failed with error -2
+[   13.259013] ath10k_pci 0000:01:00.0: Falling back to user helper
+[   13.334278] firmware ath10k!pre-cal-pci-0000:01:00.0.bin: firmware_loading_store: map pages failed
+[   13.343569] ath10k_pci 0000:01:00.0: Direct firmware load for ath10k/cal-pci-0000:01:00.0.bin failed with error -2
+[   13.354119] ath10k_pci 0000:01:00.0: Falling back to user helper
+[   13.497471] firmware ath10k!cal-pci-0000:01:00.0.bin: firmware_loading_store: map pages failed
+[   13.824200] ath10k_pci 0000:01:00.0: qca988x hw2.0 target 0x4100016c chip_id 0x043202ff sub 0000:0000
+[   13.833558] ath10k_pci 0000:01:00.0: kconfig debug 1 debugfs 1 tracing 0 dfs 1 testmode 1
+[   13.846649] ath10k_pci 0000:01:00.0: firmware ver 10.2.4.97 api 5 features no-p2p crc32 f91e34f2
+[   13.895762] ath10k_pci 0000:01:00.0: Direct firmware load for ath10k/QCA988X/hw2.0/board-2.bin failed with error -2
+[   13.906370] ath10k_pci 0000:01:00.0: Falling back to user helper
+[   13.981536] firmware ath10k!QCA988X!hw2.0!board-2.bin: firmware_loading_store: map pages failed
+[   13.990765] ath10k_pci 0000:01:00.0: board_file api 1 bmi_id N/A crc32 bebc7c08
+[   15.156373] ath10k_pci 0000:01:00.0: htt-ver 2.1 wmi-op 5 htt-op 2 cal otp max-sta 128 raw 0 hwcrypto 1
+[   15.460216] u32 classifier
+[   15.462967]     input device check on
+[   15.466717]     Actions configured
+[   15.472209] Mirror/redirect action on
+[   15.547425] ip_tables: (C) 2000-2006 Netfilter Core Team
+[   15.577547] nf_conntrack version 0.5.0 (1960 buckets, 7840 max)
+[   15.641224] xt_time: kernel timezone is -0000
+[   15.658226] usbcore: registered new interface driver ath9k_htc
+[   15.703362] ieee80211 phy1: Atheros AR9550 Rev:0 mem=0xb8100000, irq=47
+[   18.916668] zram0: detected capacity change from 0 to 63963136
+[   19.250979] Adding 62460k swap on /dev/zram0.  Priority:-1 extents:1 across:62460k SS
+[   23.887357] IPv6: ADDRCONF(NETDEV_UP): eth0: link is not ready
+[   23.908373] device eth0.1 entered promiscuous mode
+[   23.913239] device eth0 entered promiscuous mode
+[   23.929249] IPv6: ADDRCONF(NETDEV_UP): br-lan: link is not ready
+[   23.971787] IPv6: ADDRCONF(NETDEV_UP): eth0.2: link is not ready
+[   25.874454] eth0: link up (1000Mbps/Full duplex)
+[   25.883746] IPv6: ADDRCONF(NETDEV_CHANGE): eth0: link becomes ready
+[   25.901362] br-lan: port 1(eth0.1) entered forwarding state
+[   25.907093] br-lan: port 1(eth0.1) entered forwarding state
+[   25.912864] IPv6: ADDRCONF(NETDEV_CHANGE): eth0.2: link becomes ready
+[   26.090284] IPv6: ADDRCONF(NETDEV_CHANGE): br-lan: link becomes ready
+[   27.903712] br-lan: port 1(eth0.1) entered forwarding state
+
+
+
+BusyBox v1.24.2 () built-in shell (ash)
+
+     _________
+    /        /\      _    ___ ___  ___
+   /  LE    /  \    | |  | __|   \| __|
+  /    DE  /    \   | |__| _|| |) | _|
+ /________/  LE  \  |____|___|___/|___|                      lede-project.org
+ \        \   DE /
+  \    LE  \    /  -----------------------------------------------------------
+   \  DE    \  /    Reboot (HEAD, r256)
+    \________\/    -----------------------------------------------------------
+
+root@lede:/# iw phy phy0 info
+Wiphy phy0
+	max # scan SSIDs: 16
+	max scan IEs length: 195 bytes
+	max # sched scan SSIDs: 0
+	max # match sets: 0
+	Retry short limit: 7
+	Retry long limit: 4
+	Coverage class: 0 (up to 0m)
+	Device supports AP-side u-APSD.
+	Available Antennas: TX 0x3 RX 0x3
+	Configured Antennas: TX 0x3 RX 0x3
+	Supported interface modes:
+		 * managed
+		 * AP
+		 * AP/VLAN
+		 * monitor
+		 * mesh point
+	Band 1:
+		Capabilities: 0x19ef
+			RX LDPC
+			HT20/HT40
+			SM Power Save disabled
+			RX HT20 SGI
+			RX HT40 SGI
+			TX STBC
+			RX STBC 1-stream
+			Max AMSDU length: 7935 bytes
+			DSSS/CCK HT40
+		Maximum RX AMPDU length 65535 bytes (exponent: 0x003)
+		Minimum RX AMPDU time spacing: 8 usec (0x06)
+		HT TX/RX MCS rate indexes supported: 0-15
+		Frequencies:
+			* 2412 MHz [1] (30.0 dBm)
+			* 2417 MHz [2] (30.0 dBm)
+			* 2422 MHz [3] (30.0 dBm)
+			* 2427 MHz [4] (30.0 dBm)
+			* 2432 MHz [5] (30.0 dBm)
+			* 2437 MHz [6] (30.0 dBm)
+			* 2442 MHz [7] (30.0 dBm)
+			* 2447 MHz [8] (30.0 dBm)
+			* 2452 MHz [9] (30.0 dBm)
+			* 2457 MHz [10] (30.0 dBm)
+			* 2462 MHz [11] (30.0 dBm)
+			* 2467 MHz [12] (disabled)
+			* 2472 MHz [13] (disabled)
+			* 2484 MHz [14] (disabled)
+	Band 2:
+		Capabilities: 0x19ef
+			RX LDPC
+			HT20/HT40
+			SM Power Save disabled
+			RX HT20 SGI
+			RX HT40 SGI
+			TX STBC
+			RX STBC 1-stream
+			Max AMSDU length: 7935 bytes
+			DSSS/CCK HT40
+		Maximum RX AMPDU length 65535 bytes (exponent: 0x003)
+		Minimum RX AMPDU time spacing: 8 usec (0x06)
+		HT TX/RX MCS rate indexes supported: 0-15
+		VHT Capabilities (0x338001b2):
+			Max MPDU length: 11454
+			Supported Channel Width: neither 160 nor 80+80
+			RX LDPC
+			short GI (80 MHz)
+			TX STBC
+			RX antenna pattern consistency
+			TX antenna pattern consistency
+		VHT RX MCS set:
+			1 streams: MCS 0-9
+			2 streams: MCS 0-9
+			3 streams: not supported
+			4 streams: not supported
+			5 streams: not supported
+			6 streams: not supported
+			7 streams: not supported
+			8 streams: not supported
+		VHT RX highest supported: 0 Mbps
+		VHT TX MCS set:
+			1 streams: MCS 0-9
+			2 streams: MCS 0-9
+			3 streams: not supported
+			4 streams: not supported
+			5 streams: not supported
+			6 streams: not supported
+			7 streams: not supported
+			8 streams: not supported
+		VHT TX highest supported: 0 Mbps
+		Frequencies:
+			* 5180 MHz [36] (23.0 dBm)
+			* 5200 MHz [40] (23.0 dBm)
+			* 5220 MHz [44] (23.0 dBm)
+			* 5240 MHz [48] (23.0 dBm)
+			* 5260 MHz [52] (23.0 dBm) (no IR, radar detection)
+			  DFS state: usable (for 23 sec)
+			  DFS CAC time: 60000 ms
+			* 5280 MHz [56] (23.0 dBm) (no IR, radar detection)
+			  DFS state: usable (for 23 sec)
+			  DFS CAC time: 60000 ms
+			* 5300 MHz [60] (23.0 dBm) (no IR, radar detection)
+			  DFS state: usable (for 23 sec)
+			  DFS CAC time: 60000 ms
+			* 5320 MHz [64] (23.0 dBm) (no IR, radar detection)
+			  DFS state: usable (for 23 sec)
+			  DFS CAC time: 60000 ms
+			* 5500 MHz [100] (23.0 dBm) (no IR, radar detection)
+			  DFS state: usable (for 23 sec)
+			  DFS CAC time: 60000 ms
+			* 5520 MHz [104] (23.0 dBm) (no IR, radar detection)
+			  DFS state: usable (for 23 sec)
+			  DFS CAC time: 60000 ms
+			* 5540 MHz [108] (23.0 dBm) (no IR, radar detection)
+			  DFS state: usable (for 23 sec)
+			  DFS CAC time: 60000 ms
+			* 5560 MHz [112] (23.0 dBm) (no IR, radar detection)
+			  DFS state: usable (for 23 sec)
+			  DFS CAC time: 60000 ms
+			* 5580 MHz [116] (23.0 dBm) (no IR, radar detection)
+			  DFS state: usable (for 23 sec)
+			  DFS CAC time: 60000 ms
+			* 5600 MHz [120] (23.0 dBm) (no IR, radar detection)
+			  DFS state: usable (for 23 sec)
+			  DFS CAC time: 60000 ms
+			* 5620 MHz [124] (23.0 dBm) (no IR, radar detection)
+			  DFS state: usable (for 23 sec)
+			  DFS CAC time: 60000 ms
+			* 5640 MHz [128] (23.0 dBm) (no IR, radar detection)
+			  DFS state: usable (for 23 sec)
+			  DFS CAC time: 60000 ms
+			* 5660 MHz [132] (23.0 dBm) (no IR, radar detection)
+			  DFS state: usable (for 23 sec)
+			  DFS CAC time: 60000 ms
+			* 5680 MHz [136] (23.0 dBm) (no IR, radar detection)
+			  DFS state: usable (for 23 sec)
+			  DFS CAC time: 60000 ms
+			* 5700 MHz [140] (23.0 dBm) (no IR, radar detection)
+			  DFS state: usable (for 23 sec)
+			  DFS CAC time: 60000 ms
+			* 5720 MHz [144] (23.0 dBm) (radar detection)
+			  DFS state: usable (for 23 sec)
+			  DFS CAC time: 60000 ms
+			* 5745 MHz [149] (30.0 dBm)
+			* 5765 MHz [153] (30.0 dBm)
+			* 5785 MHz [157] (30.0 dBm)
+			* 5805 MHz [161] (30.0 dBm)
+			* 5825 MHz [165] (30.0 dBm)
+	valid interface combinations:
+		 * #{ AP, mesh point } <= 8, #{ managed } <= 1,
+		   total <= 8, #channels <= 1, STA/AP BI must match, radar detect widths: { 20 MHz (no HT), 20 MHz, 40 MHz, 80 MHz }
+
+	HT Capability overrides:
+		 * MCS: ff ff ff ff ff ff ff ff ff ff
+		 * maximum A-MSDU length
+		 * supported channel width
+		 * short GI for 40 MHz
+		 * max A-MPDU length exponent
+		 * min MPDU start spacing
+	Device supports VHT-IBSS.
+root@lede:/# 
